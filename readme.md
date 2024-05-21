@@ -404,7 +404,7 @@ Note: Please make sure there are no errors while building (all test cases should
 solution is testable through CLI like below:
 
 ```bash
- java -jar <your-jar-file> --config config.json --betting-amount 100
+ java -jar scratch-game-jar-with-dependencies.jar --config config.json --betting-amount 100
 ```
 
 | parameter      | description                                        |
