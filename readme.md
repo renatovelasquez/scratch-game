@@ -1,7 +1,7 @@
 # Scratch Game #
 
-| :exclamation:  This is very important, consider the next points since the task provided, on my point of view, had typing errors |
-|---------------------------------------------------------------------------------------------------------------------------------|
+| :exclamation:  This is very important, consider the next points since the task provided, on my point of view, had typing errors, so it was needed to update the config file |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 > for the first example the matrix and the calculations are not matching
 > Calculations: (bet_amount x reward(symbol_A) x reward(same_symbol_5_times) x reward(same_symbols_vertically)) + (
