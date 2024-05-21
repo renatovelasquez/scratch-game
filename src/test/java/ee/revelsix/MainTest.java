@@ -95,4 +95,20 @@ public class MainTest {
         assertEquals("5x", result.getAppliedBonusSymbol());
     }
 
+    @Test
+    public void testRewardCalculationLostGameMiss() {
+        String[][] matrix = {
+                {"C", "MISS", "D"},
+                {"F", "D", "D"},
+                {"F", "D", "B"}
+        };
+
+        RewardCalculator calculator = new RewardCalculator(gameConfig);
+        RewardResult result = calculator.calculateReward(matrix, 100);
+
+        assertEquals(0, result.getReward());
+        assertEquals(1, result.getAppliedWinningCombinations().size());
+        assertEquals("MISS", result.getAppliedBonusSymbol());
+    }
+
 }

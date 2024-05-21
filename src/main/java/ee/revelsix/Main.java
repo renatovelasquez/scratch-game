@@ -7,13 +7,13 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        if (args.length != 2) {
-            System.err.println("Usage: java -jar scratch-game.jar <config.json> <betAmount>");
+        if (args.length != 4 || !args[0].equals("--config") || !args[2].equals("--betting-amount")) {
+            System.err.println("Usage: java -jar scratch-game-jar-with-dependencies.jar --config <config.json> --betting-amount <betAmount>");
             System.exit(1);
         }
 
-        String configPath = args[0];
-        double betAmount = Double.parseDouble(args[1]);
+        String configPath = args[1];
+        double betAmount = Double.parseDouble(args[3]);
 
         ObjectMapper mapper = new ObjectMapper();
         GameConfig config = mapper.readValue(new File(configPath), GameConfig.class);

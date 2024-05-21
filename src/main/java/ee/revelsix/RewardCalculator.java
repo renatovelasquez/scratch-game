@@ -75,17 +75,10 @@ class RewardCalculator {
         }
 
         for (Map.Entry<String, Symbol> entry : bonuses) {
-            switch (entry.getValue().getImpact()) {
-                case MULTIPLY_REWARD:
-                    reward = reward * entry.getValue().getReward_multiplier();
-                    break;
-                case EXTRA_BONUS:
-                    reward = reward + entry.getValue().getExtra();
-                    break;
-                case MISS:
-                    reward = reward + entry.getValue().getReward_multiplier();
-                    break;
-            }
+            if (entry.getValue().getImpact().equals(EXTRA_BONUS))
+                reward = reward + entry.getValue().getExtra();
+            else
+                reward = reward * entry.getValue().getReward_multiplier();
         }
         return reward;
     }
